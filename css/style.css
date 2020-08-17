@@ -52,11 +52,12 @@ input {
     width: 215px;
     border: 1px solid gray;
     border-radius: 5px;
+    display: none;
 }
-.information{
-    margin: 100px 0;
+.information{    
+    margin: 100px auto;
     display: grid;
-    grid-template-columns: minmax(200px, 279px) minmax(200px, 600px) ;
+    grid-template-columns: 80%;
     justify-content: center;
     align-content: initial;
     grid-gap: 28px;     
@@ -84,7 +85,7 @@ button{
     margin-bottom: 25px;
 }
 .second li{
-    margin-right: 55px;
+    margin-right: 15px;
 }
 .imgInfo{
     justify-self: center;
@@ -94,6 +95,58 @@ button{
 }
 .information img{
     border-radius: 50%; 
+}
+@media screen and (min-width: 768px){
+    input {
+        display: block;
+    }
+    .information{    
+        grid-template-columns: minmax(100px, 279px) minmax(300px, 600px) ;    
+    }
+    .second li{
+        margin-right: 55px;
+    }
+}
+.separador{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    
+}
+.subSeparador{
+   border-top: 1px solid rgba(126, 126, 126, 0.6);
+}
+.infoSeparador ul{
+    display: flex;
+    justify-content: center;    
+}
+.infoSeparador li{
+    margin-right: 30px;
+    padding: 25px 0;
+    display: flex;
+    align-content: center;
+    font-size: 12px;
+    color: rgba(126, 126, 126, 0.8);
+    cursor: pointer;
+}
+.infoSeparador li i{
+    font-size: 12px;
+    margin: 0;
+    margin-right: 8px;
+}
+.infoSeparador li:nth-of-type(1){
+    color: rgba(19, 19, 19, 1);
+}
+.infoSeparador li:nth-of-type(4){
+    margin-right: 0;
+}
+@media screen and (min-width: 768px){
+.infoSeparador li{
+    margin-right: 50px;
+}
+.separador{
+    grid-template-columns: 935px;
+}
 }
 .post{
     cursor: pointer;
